@@ -6,7 +6,6 @@ import '../model/foodmodel.dart';
 class ApiService {
   static const String baseUrl = "https://www.themealdb.com/api/json/v1/1/";
 
-  // Fetch Categories
   Future<CategoryModel> fetchCategories() async {
     final response = await http.get(Uri.parse("${baseUrl}categories.php"));
     if (response.statusCode == 200) {
@@ -16,7 +15,6 @@ class ApiService {
     }
   }
 
-  // Fetch Meals by Category
   Future<MealModel> fetchMeals(String categoryName) async {
     final response =
         await http.get(Uri.parse("${baseUrl}filter.php?c=$categoryName"));
