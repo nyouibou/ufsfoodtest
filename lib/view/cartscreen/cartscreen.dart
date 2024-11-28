@@ -51,6 +51,12 @@ class CartScreeen extends StatelessWidget {
               },
             ),
           ),
+          ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                "Buy Now",
+                style: TextStyle(color: Colors.green),
+              ))
         ],
       ),
     );

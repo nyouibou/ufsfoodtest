@@ -10,7 +10,6 @@ class HomeScreeen extends StatelessWidget {
   final HomeController controller = Get.put(HomeController());
 
   HomeScreeen() {
-    // Fetch categories when the screen loads
     controller.fetchCategories();
   }
 
@@ -128,7 +127,12 @@ class HomeScreeen extends StatelessWidget {
                               backgroundColor:
                                   isInCart ? Colors.red : Colors.green,
                             ),
-                            child: Text(isInCart ? "Remove" : "Add to Cart"),
+                            child: Text(
+                              isInCart ? "Remove" : "Add to Cart",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
                           )
                         ],
                       ),
