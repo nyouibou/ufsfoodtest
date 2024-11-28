@@ -33,7 +33,6 @@ class HomeScreeen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Dropdown for categories
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Obx(
@@ -45,7 +44,8 @@ class HomeScreeen extends StatelessWidget {
                 return DropdownButtonFormField<String>(
                   decoration: InputDecoration(
                     labelText: "Select a Category",
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
                   ),
                   value: controller.selectedCategory.value.isEmpty
                       ? null
@@ -67,8 +67,6 @@ class HomeScreeen extends StatelessWidget {
               },
             ),
           ),
-
-          // Meals grid
           Expanded(
             child: Obx(
               () {
